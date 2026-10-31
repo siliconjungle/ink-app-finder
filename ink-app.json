@@ -1,0 +1,95 @@
+{
+  "slug": "finder",
+  "title": "Finder",
+  "repository": "https://github.com/siliconjungle/ink-app-finder",
+  "directory": "web",
+  "entry": "index.html",
+  "desktop": {
+    "entry": "finder",
+    "icon": {
+      "svg": "web/icon.svg"
+    },
+    "dropTypes": [
+      "*"
+    ],
+    "window": {
+      "width": 1120,
+      "height": 680
+    }
+  },
+  "capabilities": [
+    "world.read",
+    "world.write",
+    "desktop.open"
+  ],
+  "commands": [
+    {
+      "id": "files",
+      "title": "Find files",
+      "description": "Browse or search find files.",
+      "inputs": [
+        {
+          "name": "q",
+          "label": "Search",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "offset",
+          "label": "Offset",
+          "type": "number",
+          "required": false,
+          "default": 0
+        },
+        {
+          "name": "limit",
+          "label": "Results per page",
+          "type": "number",
+          "required": false,
+          "default": 30
+        }
+      ],
+      "handler": {
+        "type": "query",
+        "query": {
+          "kind": "file",
+          "fileTypes": [
+            "*"
+          ],
+          "scope": "world"
+        }
+      },
+      "result": {
+        "items": "objects",
+        "title": "title",
+        "subtitle": "kind"
+      }
+    },
+    {
+      "id": "browse",
+      "title": "Browse files",
+      "description": "Open Finder with a search.",
+      "inputs": [
+        {
+          "name": "q",
+          "label": "Search",
+          "type": "text",
+          "required": false
+        }
+      ],
+      "handler": {
+        "type": "open"
+      }
+    },
+    {
+      "id": "new-record",
+      "title": "New record…",
+      "description": "Open the record creation form.",
+      "inputs": [],
+      "handler": {
+        "type": "open"
+      }
+    }
+  ],
+  "commandsClient": "commands.mjs"
+}
