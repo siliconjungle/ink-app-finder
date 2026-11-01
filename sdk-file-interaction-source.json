@@ -1,0 +1,8 @@
+{
+  "sourcePackage": "@ink-os/platform",
+  "sourceDirectory": "sdk/src",
+  "files": {
+    "web/object-drag.js": "942d6e3410b3d0b9f0b986fc4ae6328c5bdfc37853a81323e039d69f1561b287",
+    "web/file-icons.js": "a3fe15fbc24af2f3dd9bc2f1526538ef0195291c1a743914ee7bca746683033a"
+  }
+}

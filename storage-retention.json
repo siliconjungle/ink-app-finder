@@ -10,7 +10,8 @@
     "README.md": "Public source, tests, required assets or licenses.",
     ".gitignore": "Public source, tests, required assets or licenses.",
     "package.json": "Public source, tests, required assets or licenses.",
-    ".gitleaks.toml": "Secret scanner configuration with narrowly scoped source-checksum exceptions."
+    ".gitleaks.toml": "Secret scanner configuration with narrowly scoped source-checksum exceptions.",
+    "sdk-file-interaction-source.json": "Exact checksums for shared SDK pointer-drag and file-type icon modules vendored into Finder."
   },
   "safe_to_remove": {}
 }
